@@ -9,37 +9,86 @@ and open the template in the editor.
         <title>DragAndDropCircuit</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="CSS/bootstrap-theme.min.css">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="js/bootstrap.min.js"></script>      
-        <!-- Jquery -->        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="col-md-12" style="background-color: red">
+        <div class="col-md-12" style="background-color: cornflowerblue">
             <div class="navbar">
-
             </div>
         </div>
-        <div class="col-md-2" style="background-color: brown">
-            <ul class="list-group">
-                <li class="list-group-item">First item</li>
-                <li class="list-group-item">Second item</li>
-                <li class="list-group-item">Third item</li>
-            </ul>
+        <div class="col-md-2" style="background-color: aquamarine; padding-top: 15px; height:469px;">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                Componente 1</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body"><img class="center-block" src="images/comp4.jpg" alt=""/></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                Componente 2</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body"><img class="center-block" src="images/comp1.jpg" alt=""/></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                Componente 3</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body"><img class="center-block" src="images/comp2.jpg" alt=""/></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                Componente 4</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body"><img class="center-block" src="images/comp3.jpg" alt=""/></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                Componente 5</a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body"><img class="center-block" src="images/comp5.jpg" alt=""/></div>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div class="col-md-10" style="background-color: orange">
-            <div class="panel panel-default">
-                <div class="panel-body">A Basic Panel</div>
+        <div class="col-md-10" style="background-color: aquamarine">
+            <div  class="center-block" style="height:445px; width: 994px; background-image: url('images/board.jpg'); margin-top: 12px; margin-bottom: 12px;">
+                <div style="width: 168px; height:148px; background-color: aquamarine; position: relative; left: 738px; top: 224px;"></div>
+                <div style="width: 154px; height:106px; background-color: aquamarine; position: relative; left: 422px; top: -29px;"></div>
+                <div style="width: 75px; height:92px; background-color: aquamarine; position: relative; left: 673px; top: -229px;"></div>
+                <div style="width: 112px; height:73px; background-color: aquamarine; position: relative; left: 125px; top: -75px;"></div>
+                <div style="width: 95px; height:103px; background-color: aquamarine; position: relative; left: 236px; top: -412px;"></div>
             </div>
         </div>
-        <div class="col-md-12" style="background-color: blue">
+        <div class="col-md-12" style="background-color: cornflowerblue">
             <div class="navbar">
-
             </div>
         </div>
     </body>
