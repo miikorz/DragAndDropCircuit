@@ -1,10 +1,10 @@
 
 var board = new Array("", "", "", "", "");
 var compAmount = 5;
-var wellPluged = 0;
+var wellPlugged = 0;
 
 function Rules(cAmount) {
-
+    this.compAmount = cAmount;
 }
 
 Rules.prototype.ableToReturnBox = function (idBoxSlot, idComp) {
@@ -34,21 +34,32 @@ Rules.prototype.unSetComp = function (idComp) {
 }
 
 Rules.prototype.isCircuitProperlyConnected = function () {
+    alert(compAmount);
     for (var i = 0; i < board.length; i++) {
         if (board[i] == i) {
             alert("sumando wellPluged");
-            wellPluged++;
+            wellPlugged++;
         }
     }
-    if (wellPluged == 5) {
-        alert("Circuit works! well pluged components: " + wellPluged);
+    if (wellPlugged === compAmount) {
+        alert("well plugged components: " + wellPlugged);
+        return true;
     } else {
-        alert("Circuit doesn't work! well pluged components: " + wellPluged);
+        alert("well plugged components: " + wellPlugged);
+        return false;
     }
 }
 
-Rules.prototype.cleanPlugedComps = function () {
-    wellPluged = 0;
+Rules.prototype.cleanPluggedComps = function () {
+    wellPlugged = 0;
+}
+
+Rules.prototype.isBoardFull = function() {
+    for (var i = 0; i < board.length; i++) {
+        if (board[i] == "") {
+            return true;
+        }
+    }
 }
 
 var rules = new Rules(5);
