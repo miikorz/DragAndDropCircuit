@@ -32,6 +32,7 @@ function onDropBoardSlot(event) {
     alert("idComp "+idComp+" idBoardSlot "+idBoardSlot);
     if (rules.ableToSetComp(idBoardSlot)) {
         //hacer un unset si el drop viene de otro slot del board
+        rules.unSetComp(idComp);
         rules.setComp(idBoardSlot, idComp);
         event.target.appendChild(document.getElementById(data));
         
@@ -64,5 +65,10 @@ function getIdBoxSlot(event) {
 ;
 
 function engageButton() {
+  rules.cleanPlugedComps();
   rules.isCircuitProperlyConnected();
+};
+
+function reset() {
+    location.reload();
 };

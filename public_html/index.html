@@ -27,7 +27,7 @@ and open the template in the editor.
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                Batería nuclear</a>
+                                Condensador de flujo</a>
                         </h4>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse in">
@@ -38,7 +38,7 @@ and open the template in the editor.
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                Condensador de flujo</a>
+                                Bobina atómica</a>
                         </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
@@ -49,7 +49,7 @@ and open the template in the editor.
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                Bobina atómica</a>
+                                Diodo plasmático</a>
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
@@ -60,7 +60,7 @@ and open the template in the editor.
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                                Diodo plasmático</a>
+                                Batería nuclear</a>
                         </h4>
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
@@ -82,7 +82,7 @@ and open the template in the editor.
         </div>
         <div class="col-md-10" style="background-color: aquamarine">
             <div  class="center-block" style="height:445px; width: 994px; background-image: url('images/board.jpg'); margin-top: 12px; margin-bottom: 12px;">
-                <div id="boardSlot1" id-board-slot="3" style="width: 168px; height:148px; background-color: aquamarine; position: relative; left: 738px; top: 224px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot1" class="" id-board-slot="3" style="width: 168px; height:148px; background-color: aquamarine; position: relative; left: 738px; top: 224px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
                 <div id="boardSlot2" id-board-slot="4" style="width: 154px; height:106px; background-color: aquamarine; position: relative; left: 422px; top: -29px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
                 <div id="boardSlot3" id-board-slot="1" style="width: 75px; height:92px; background-color: aquamarine; position: relative; left: 673px; top: -229px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
                 <div id="boardSlot4" id-board-slot="2" style="width: 112px; height:73px; background-color: aquamarine; position: relative; left: 125px; top: -75px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
@@ -92,6 +92,7 @@ and open the template in the editor.
         <div class="col-md-12" style="background-color: cornflowerblue">
             <div class="navbar">
                 <button id="checkCircuit" type="button" class="btn btn-danger  center-block" style="margin-top: 15px;" onclick="engageButton()">Engage Power!</button>
+                <button id="reset" type="button" class="btn btn-primary  center-block" style="margin-top: 15px;" onclick="reset()">Reset</button>
             </div>
         </div>
     </body>
