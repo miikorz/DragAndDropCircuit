@@ -13,7 +13,6 @@ function setTransformations() {
     
 }
 
-
 function scale() {
     transform.scale = true;
     setTransformations();
