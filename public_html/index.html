@@ -14,6 +14,7 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/reset.css" rel="stylesheet" type="text/css"/>
         <script src="index.js" type="text/javascript"></script>
+        <script src="js/rules.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="col-md-12" style="background-color: cornflowerblue">
@@ -30,7 +31,7 @@ and open the template in the editor.
                         </h4>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse in">
-                        <div id="BoxSlot1" id-box-slot="1" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="Comp1" class="center-block" src="images/comp4.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
+                        <div id="boxSlot1" id-box-slot="0" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="comp1" id-comp="0" class="center-block" src="images/comp1.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -41,7 +42,7 @@ and open the template in the editor.
                         </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
-                        <div id="BoxSlot2" id-box-slot="2" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="Comp2" class="center-block" src="images/comp1.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
+                        <div id="boxSlot2" id-box-slot="1" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="comp2" id-comp="1" class="center-block" src="images/comp2.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -52,7 +53,7 @@ and open the template in the editor.
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
-                        <div id="BoxSlot3" id-box-slot="3" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="Comp3" class="center-block" src="images/comp2.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
+                        <div id="boxSlot3" id-box-slot="2" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="comp3" id-comp="2" class="center-block" src="images/comp3.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -63,7 +64,7 @@ and open the template in the editor.
                         </h4>
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
-                        <div id="BoxSlot4" id-box-slot="4" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="Comp4" class="center-block" src="images/comp3.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
+                        <div id="boxSlot4" id-box-slot="3" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="comp4" id-comp="3" class="center-block" src="images/comp4.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -74,22 +75,23 @@ and open the template in the editor.
                         </h4>
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
-                        <div id="BoxSlot5" id-box-slot="5" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="Comp5" class="center-block" src="images/comp5.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
+                        <div id="boxSlot5" id-box-slot="4" class="panel-body" ondrop="onDropBoxSlot(event)" ondragover="onDragOverBoxSlot(event)"><img id="comp5" id-comp="4" class="center-block" src="images/comp5.jpg" alt="" ondragstart="onDragStartComp(event)"/></div>
                     </div>
                 </div>
             </div> 
         </div>
         <div class="col-md-10" style="background-color: aquamarine">
             <div  class="center-block" style="height:445px; width: 994px; background-image: url('images/board.jpg'); margin-top: 12px; margin-bottom: 12px;">
-                <div id="BoardSlot1" id-board-slot="1" style="width: 168px; height:148px; background-color: aquamarine; position: relative; left: 738px; top: 224px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
-                <div id="BoardSlot2" id-board-slot="2" style="width: 154px; height:106px; background-color: aquamarine; position: relative; left: 422px; top: -29px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
-                <div id="BoardSlot3" id-board-slot="3" style="width: 75px; height:92px; background-color: aquamarine; position: relative; left: 673px; top: -229px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
-                <div id="BoardSlot4" id-board-slot="4" style="width: 112px; height:73px; background-color: aquamarine; position: relative; left: 125px; top: -75px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
-                <div id="BoardSlot5" id-board-slot="5" style="width: 95px; height:103px; background-color: aquamarine; position: relative; left: 236px; top: -412px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot1" id-board-slot="3" style="width: 168px; height:148px; background-color: aquamarine; position: relative; left: 738px; top: 224px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot2" id-board-slot="4" style="width: 154px; height:106px; background-color: aquamarine; position: relative; left: 422px; top: -29px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot3" id-board-slot="1" style="width: 75px; height:92px; background-color: aquamarine; position: relative; left: 673px; top: -229px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot4" id-board-slot="2" style="width: 112px; height:73px; background-color: aquamarine; position: relative; left: 125px; top: -75px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
+                <div id="boardSlot5" id-board-slot="0" style="width: 95px; height:103px; background-color: aquamarine; position: relative; left: 236px; top: -412px;" ondrop="onDropBoardSlot(event)" ondragover="onDragOverBoardSlot(event)"></div>
             </div>
         </div>
         <div class="col-md-12" style="background-color: cornflowerblue">
             <div class="navbar">
+                <button id="checkCircuit" type="button" class="btn btn-danger  center-block" style="margin-top: 15px;" onclick="engageButton()">Engage Power!</button>
             </div>
         </div>
     </body>

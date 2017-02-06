@@ -1,57 +1,68 @@
+
+var rules = new Rules(5);
+
 function onDragStartComp(event) {
     event.dataTransfer.setData("text", event.target.id);
-};
+    var data = event.dataTransfer.getData("text");
+}
+;
 
 function onDropBoxSlot(event) {
     event.preventDefault();
+
     var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-};
+    var idComp = document.getElementById(data).getAttribute('id-comp');
+    var idBoxSlot = document.getElementById(getIdBoxSlot(event)).getAttribute('id-box-slot');
+    if (rules.ableToReturnBox(idBoxSlot, idComp)) {
+        rules.unSetComp(idComp);
+        event.target.appendChild(document.getElementById(data));
+    } else {
+        alert("Please return the comp to its properly slot")
+    }
+ 
+}
+;
 
 function onDropBoardSlot(event) {
     event.preventDefault();
+
     var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-};
+    var idComp = document.getElementById(data).getAttribute('id-comp');
+    var idBoardSlot = document.getElementById(getIdBoardSlot(event)).getAttribute('id-board-slot');
+    alert("idComp "+idComp+" idBoardSlot "+idBoardSlot);
+    if (rules.ableToSetComp(idBoardSlot)) {
+        //hacer un unset si el drop viene de otro slot del board
+        rules.setComp(idBoardSlot, idComp);
+        event.target.appendChild(document.getElementById(data));
+        
+    } else {
+        alert("Slot full");
+    }
+}
+;
 
 function onDragOverBoxSlot(event) {
     event.preventDefault();
-};
+}
+;
 
 function onDragOverBoardSlot(event) {
     event.preventDefault();
-};
+}
+;
 
-function getIdCompFromElementComp(elementComp){
-    var value = $(elementComp).attr("id-comp")
-    return $(elementComp).attr("id-comp") * 1;
-};
+function getIdBoardSlot(event) {
+    var id = event.target.id;
+    return id;
+}
+;
 
-function getIdBoardSlotFromElementBoardSlot(elementBoardSlot) {
-    return $(elementBoardSlot).attr("id-board-slot") * 1;
-};
+function getIdBoxSlot(event) {
+    var id = event.target.id;
+    return id;
+}
+;
 
-function getIdBoardSlotFromElementBoardSlot(elementBoardSlot){
-    return $(elementBoardSlot).attr("id-board-slot") * 1;
-};
-
-function getElementCompFromIdComp(idComp){
-    var elements=$("[id-comp='" + idComp + "']");
-    
-    if (elements.length === 0) {
-        throw "No existe el elemento con idComp=" + idComp;
-    }
-    if (elements.lenght > 1) {
-        throw "Existe mas de un elemento con idComp=" + idComp;
-    }
-    
-    return elements[0];
-};
-
-function getElementBoardSlotFromIdBoardSlot(idBoardSlot){
-    return $("[id-board-slot='" + idBoardSlot + "']")[0];
-};
-
-function getElementBoardSlotFromIdBoardSlot(idBoardSlot){
-    return $("[id-board-slot='" + idBoardSlot + "']")[0];
+function engageButton() {
+  rules.isCircuitProperlyConnected();
 };
