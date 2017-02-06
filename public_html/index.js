@@ -17,6 +17,8 @@ function onDropBoxSlot(event) {
     } else {
         alert("Please return the comp to its properly slot")
     }
+    
+    engageButtonManager();
 }
 
 function onDropBoardSlot(event) {
@@ -31,10 +33,11 @@ function onDropBoardSlot(event) {
         rules.unSetComp(idComp);
         rules.setComp(idBoardSlot, idComp);
         event.target.appendChild(document.getElementById(data));
-
     } else {
         alert("Slot full");
     }
+
+    engageButtonManager();
 }
 
 function onDragOverBoxSlot(event) {
@@ -62,7 +65,16 @@ function engageButton() {
     } else {
         alert("Circuit doesn't work!");
     }
+}
 
+function engageButtonManager() {
+    if (rules.isBoardFull()) {
+        $('#checkCircuit').removeClass('disabled');
+        $('#checkCircuit').attr('onclick', 'engageButton()');
+    } else {
+        $('#checkCircuit').addClass('disabled');
+        $('#checkCircuit').removeAttr('onclick');
+    }
 }
 
 function reset() {
@@ -77,6 +89,8 @@ function reset() {
     }
 
     rules.cleanPluggedComps();
+
+    engageButtonManager();
 
     //location.reload();
 }

@@ -34,10 +34,8 @@ Rules.prototype.unSetComp = function (idComp) {
 }
 
 Rules.prototype.isCircuitProperlyConnected = function () {
-    alert(compAmount);
     for (var i = 0; i < board.length; i++) {
         if (board[i] == i) {
-            alert("sumando wellPluged");
             wellPlugged++;
         }
     }
@@ -57,9 +55,10 @@ Rules.prototype.cleanPluggedComps = function () {
 Rules.prototype.isBoardFull = function() {
     for (var i = 0; i < board.length; i++) {
         if (board[i] == "") {
-            return true;
+            return false;
         }
     }
+    return true;
 }
 
 var rules = new Rules(5);
