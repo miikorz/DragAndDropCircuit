@@ -1,17 +1,18 @@
 .button{
     margin-top: 15px;
+    transition: transform 3s;
 }
 
 .leftColumn{
     padding-top: 15px; height:469px;
 }
 
-.aquamarine{
-    background-color: aquamarine;
+.mainColor1{
+    background-color: lightcyan;
 }
 
-.cornflowerblue{
-    background-color: cornflowerblue;
+.mainColor2{
+    background-color: lightblue;
 }
 
 .boardContainer {
@@ -24,7 +25,7 @@
 
 .boardSlot{
     border-radius: 25px;
-    background: aquamarine; 
+    background: lightblue; 
     position: relative; 
 }
 

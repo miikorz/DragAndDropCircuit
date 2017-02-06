@@ -1,7 +1,27 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+var transform = {
+    scale: false,
+};
+
+function setTransformations() {
+    var transformStyle = "";
+
+    if (transform.scale === true) {
+        transformStyle += "scale(1.5, 1.5)";
+    }
+
+    document.getElementById("checkCircuit").style.transform = transformStyle;
+    
+}
+
+
+function scale() {
+    transform.scale = true;
+    setTransformations();
+}
+
+function resetScale() {
+    transform.scale = false;
+    setTransformations();
+}
 
 

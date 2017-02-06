@@ -40,10 +40,10 @@ Rules.prototype.isCircuitProperlyConnected = function () {
         }
     }
     if (wellPlugged === compAmount) {
-        alert("well plugged components: " + wellPlugged);
+        $('small').text(wellPlugged);
         return true;
     } else {
-        alert("well plugged components: " + wellPlugged);
+        $('small').text(wellPlugged);
         return false;
     }
 }

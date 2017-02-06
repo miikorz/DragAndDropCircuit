@@ -78,9 +78,11 @@ function engageButtonManager() {
     if (rules.isBoardFull()) {
         $('#checkCircuit').removeClass('disabled');
         $('#checkCircuit').attr('onclick', 'engageButton()');
+        scale();
     } else {
         $('#checkCircuit').addClass('disabled');
         $('#checkCircuit').removeAttr('onclick');
+        resetScale();
     }
 }
 
@@ -96,8 +98,12 @@ function reset() {
     }
 
     rules.cleanPluggedComps();
+    
+     $('small').text(wellPlugged);
 
     engageButtonManager();
+    
+    resetScale();
 
     for (var i = 0; i < 4; i++) {
         $('#diode' + (i + 1)).removeClass('diodeOff');
