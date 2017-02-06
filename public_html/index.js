@@ -15,9 +15,9 @@ function onDropBoxSlot(event) {
         rules.unSetComp(idComp);
         event.target.appendChild(document.getElementById(data));
     } else {
-        alert("Please return the comp to its properly slot")
+        $("#myModal4").modal();
     }
-    
+
     engageButtonManager();
 }
 
@@ -29,14 +29,13 @@ function onDropBoardSlot(event) {
     var idBoardSlot = document.getElementById(getIdBoardSlot(event)).getAttribute('id-board-slot');
 
     if (rules.ableToSetComp(idBoardSlot)) {
-        //hacer un unset si el drop viene de otro slot del board
         rules.unSetComp(idComp);
         rules.setComp(idBoardSlot, idComp);
         event.target.appendChild(document.getElementById(data));
     } else {
-        alert("Slot full");
+        $("#myModal1").modal();
     }
-
+    $(document.getElementById(data)).addClass('animated bounce');
     engageButtonManager();
 }
 
@@ -61,9 +60,17 @@ function getIdBoxSlot(event) {
 function engageButton() {
     rules.cleanPluggedComps();
     if (rules.isCircuitProperlyConnected()) {
-        alert("Circuit works!");
+        $("#myModal2").modal();
+        for (var i = 0; i < 4; i++) {
+            $('#diode' + (i + 1)).removeClass('diodeOff');
+            $('#diode' + (i + 1)).addClass('diodeOn');
+        }
     } else {
-        alert("Circuit doesn't work!");
+        $("#myModal3").modal();
+        for (var i = 0; i < 4; i++) {
+            $('#diode' + (i + 1)).removeClass('diodeOn');
+            $('#diode' + (i + 1)).addClass('diodeOff');
+        }
     }
 }
 
@@ -92,6 +99,10 @@ function reset() {
 
     engageButtonManager();
 
-    //location.reload();
+    for (var i = 0; i < 4; i++) {
+        $('#diode' + (i + 1)).removeClass('diodeOff');
+        $('#diode' + (i + 1)).removeClass('diodeOn');
+    }
+
 }
 

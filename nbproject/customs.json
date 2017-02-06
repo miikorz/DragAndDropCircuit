@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "id-box-slot": {
+            "context": "div"
+        },
+        "id-comp": {
+            "context": "img"
+        },
+        "id-board-slot": {
+            "context": "div"
+        }
+    }
+}

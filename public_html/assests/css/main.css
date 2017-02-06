@@ -1,0 +1,113 @@
+.button{
+    margin-top: 15px;
+}
+
+.leftColumn{
+    padding-top: 15px; height:469px;
+}
+
+.aquamarine{
+    background-color: aquamarine;
+}
+
+.cornflowerblue{
+    background-color: cornflowerblue;
+}
+
+.boardContainer {
+    height: 445px; 
+    width: 994px; 
+    background-image: url('../img/board.jpg'); 
+    margin-top: 12px; 
+    margin-bottom: 12px;
+}
+
+.boardSlot{
+    border-radius: 25px;
+    background: aquamarine; 
+    position: relative; 
+}
+
+.boardSlot1{
+    width: 168px; 
+    height: 148px; 
+    left: 738px; 
+    top: 224px;
+}
+
+.boardSlot2{
+    width: 154px; 
+    height: 106px; 
+    left: 422px; 
+    top: -29px;
+}
+
+.boardSlot3{
+    width: 75px; 
+    height: 92px; 
+    left: 673px; 
+    top: -230px;
+}
+
+.boardSlot4{
+    width: 112px; 
+    height: 73px; 
+    left: 125px; 
+    top: -75px;
+}
+
+.boardSlot5{
+    width: 95px; 
+    height: 103px; 
+    left: 236px; 
+    top: -412px;
+}
+
+.diode{
+    opacity: 0.8;
+    border-radius: 25px;
+    background: linear-gradient(to bottom right, lightseagreen, lightblue);
+    width: 30px;
+    height: 28px;
+    position: relative; 
+}
+
+.diodeOn{
+    animation-name: changeColorOn;
+    animation-duration: 5s;
+}
+
+.diodeOff{
+    animation-name: changeColorOff;
+    animation-duration: 5s;
+}
+
+.diode1 {
+    left: 379px; 
+    top: -395px;
+}
+
+.diode2 {
+    left: 593px; 
+    top: -422px;
+}
+
+.diode3 {
+    left: 370px; 
+    top: -407px;
+}
+
+.diode4 {
+    left: 599px; 
+    top: -433px;
+}
+
+@keyframes changeColorOn {
+    from {background: linear-gradient(to bottom right, lightseagreen, lightblue);}
+    to {background: linear-gradient(to bottom right, green, lightgreen);}
+}
+
+@keyframes changeColorOff {
+    from {background: linear-gradient(to bottom right, lightseagreen, lightblue);}
+    to {background: linear-gradient(to bottom right, red, red);}
+}
