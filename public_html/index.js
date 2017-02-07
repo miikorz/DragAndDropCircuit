@@ -87,11 +87,9 @@ function engageButtonManager() {
 }
 
 function reset() {
-    document.getElementById("boxSlot5").appendChild(document.getElementById("comp5"));
-    document.getElementById("boxSlot4").appendChild(document.getElementById("comp4"));
-    document.getElementById("boxSlot3").appendChild(document.getElementById("comp3"));
-    document.getElementById("boxSlot2").appendChild(document.getElementById("comp2"));
-    document.getElementById("boxSlot1").appendChild(document.getElementById("comp1"));
+    for (var i = 1; i < rules.compAmount+1; i++) {
+        document.getElementById("boxSlot"+i).appendChild(document.getElementById("comp"+i));
+    }
 
     for (var i = 0; i < rules.compAmount; i++) {
         rules.unSetComp(i);
